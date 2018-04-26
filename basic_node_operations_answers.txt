@@ -1,0 +1,37 @@
+Exercises
+
+Create a file called basic_node_operations_answers.txt. Put the answers to numbers 1, 2 and 6 in the file. Submit bash.js, commands.js and basic_node_operations_answers.txt.
+
+Questions
+
+1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+	A: SORT outputted every line of code from the commands.js file. It organized them according the structure, first sorting everything that was on the same indentation, then by alphabetical order. The WC command gave an out put of 37, 73, and 786. These numbers show the number of lines, the number of words, and the number of characters that are in the commands.js file. The UNIQ command returned every line of code from the commands.js file, but removed any instance where there were duplicate lines next to each other.
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+	A: My first pipe was to use sort | uniq. This operation first sorted everything in commands.js, then it removed any duplicate lines that were next to each other. There were at least a few lines removed, for example, using just the SORT function, the first two lines outputted were both 'break'. Once the UNIQ ran, these were deleted. 
+	The second pipe I used was a triple pipe, sort | uniq | wc, I wanted to see how many items were removed from the original. When I ran just WC on commands.js, I got 37, 73, and 786. Using this triple pipe, I got 29, 70, and 761. This is because the lines were sorted, then duplicate lines that where next to each other, so the count would be less.
+
+
+
+3-5 ARE CODING QUESTIONS.
+
+
+6.	function reverseString(inputString) {
+  		var reversedString = [];
+  
+  		var splitArr = inputString.split('');
+  
+  		var reverseArr = splitArr.reverse();
+  
+  		var joinedString = reverseArr.join('');
+  
+  		joinedString.forEach((element) => {
+     			reversedString.unshift(element);
+  		});
+  
+  
+  		return reversedString;
+  
+  
+	}
+ 
